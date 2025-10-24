@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+
+
+@theme {
+  --font-helvetica: Helvetica, sans-serif;
+  --default-font-family: var(--font-helvetica);
+
+  --color-green: rgba(26, 189, 80, 1);
+  --color-primary: rgba(202, 160, 92, 1);
+}
