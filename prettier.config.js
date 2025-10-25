@@ -1,13 +1,11 @@
-/** @type {import('prettier').Config} */
+/** @type {import('prettier').Config & import('prettier-plugin-tailwindcss').PluginOptions} */
 export default {
   semi: false,
   singleQuote: true,
   trailingComma: 'all',
-  plugins: [
-    '@ianvs/prettier-plugin-sort-imports',
-    'prettier-plugin-tailwindcss'
-  ],
-  importOrder: ['^@', '^[a-zA-Z0-9-]+', '^[./]'],
+  plugins: ['prettier-plugin-tailwindcss'],
   printWidth: 120,
-  tailwindStylesheet: './src/global.css'
+  tailwindFunctions: ['clsx', 'cn'],
+  tailwindAttributes: ['className'],
+  tailwindConfig: './tailwind.config.js'
 }

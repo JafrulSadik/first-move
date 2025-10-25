@@ -1,11 +1,22 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+@import 'tailwindcss';
 
+html {
+  scroll-behavior: smooth;
+}
 
 @theme {
-  --font-helvetica: Helvetica, sans-serif;
   --default-font-family: var(--font-helvetica);
+  --font-inter: Inter, sans-serif;
+  --font-helvetica: Helvetica, sans-serif;
 
   --color-green: rgba(26, 189, 80, 1);
   --color-primary: rgba(202, 160, 92, 1);
+  --color-primary-500: rgba(183, 155, 99, 1);
+  --color-secondary: rgba(251, 247, 226, 1);
+  --color-black: rgba(35, 31, 32, 1);
+  --color-gray: rgba(71, 67, 68, 1);
+  --color-body: rgba(255, 254, 249, 1);
+  --default-bg-color: var(--color-body);
 }
