@@ -9,7 +9,7 @@ const ManpowerRight = () => {
           <p className="text-base">Since 2020</p>
         </div>
 
-        <div className="text-4xl font-bold">
+        <div className="text-4xl font-bold md:text-4xl">
           Trusted Facilities & Manpower <span className="text-primary">Solutions</span> in UAE
         </div>
 
@@ -33,7 +33,7 @@ const ManpowerRight = () => {
           </div>
         </div>
 
-        <div className="border-primary flex w-fit items-center gap-2 rounded-full border p-2 font-bold">
+        <div className="border-primary flex w-fit items-center gap-2 rounded-full border p-1.5 font-bold md:p-2">
           <p className="font-inter px-3 text-base">Discover More</p>
           <div className="bg-primary rounded-full p-2">
             <IoArrowUpOutline className="rotate-45 text-white" />

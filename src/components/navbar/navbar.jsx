@@ -22,7 +22,7 @@ const Navbar = () => {
             <img src={LogoIcon} alt="Logo" className="size-10 md:size-14" />
             <img src={LogoText} alt="Logo" className="w-18 md:w-32" />
           </div>
-          <div className={`flex gap-8 text-white md:text-sm lg:text-base ${width < 1000 ? 'hidden' : 'flex'}`}>
+          <div className={`flex gap-8 text-white md:text-sm lg:text-base ${width < 990 ? 'hidden' : 'flex'}`}>
             {menuItems.map((menu) => (
               <p>{menu.title}</p>
             ))}

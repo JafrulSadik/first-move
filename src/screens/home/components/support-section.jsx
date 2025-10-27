@@ -34,7 +34,7 @@ const partners = [
 
 const SupportSection = () => {
   return (
-    <section className="flex justify-center bg-white pb-10">
+    <section className="flex justify-center bg-white md:pb-10">
       <div className="bg-primary flex w-[90%] flex-col items-center gap-4 rounded-2xl px-10 py-10 md:px-20 lg:flex-row">
         <div className="flex gap-2 text-xl font-bold text-white lg:flex-col lg:border-r lg:pr-10">
           <p className="text-nowrap">Supported by</p>

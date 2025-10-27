@@ -1,9 +1,9 @@
 import { IoArrowUpOutline } from 'react-icons/io5'
-import EventManagement from '../../../assets/images/homepage/permium-services/event-management.png'
-import HardAndSoftFacility from '../../../assets/images/homepage/permium-services/hard-and-soft-facility.png'
-import Hospitality from '../../../assets/images/homepage/permium-services/hospitality-manpower.png'
-import Cleaning from '../../../assets/images/homepage/permium-services/mall-and-office-cleaning.png'
-import Security from '../../../assets/images/homepage/permium-services/security.png'
+import EventManagement from '../../../assets/images/homepage/premium-services/event-management.png'
+import HardAndSoftFacility from '../../../assets/images/homepage/premium-services/hard-and-soft-facility.png'
+import Hospitality from '../../../assets/images/homepage/premium-services/hospitality-manpower.png'
+import Cleaning from '../../../assets/images/homepage/premium-services/mall-and-office-cleaning.png'
+import Security from '../../../assets/images/homepage/premium-services/security.png'
 
 const services = [
   {
@@ -35,7 +35,7 @@ const services = [
 
 const PremiumServices = () => {
   return (
-    <div className="py-15 flex justify-center bg-white">
+    <div className="md:py-15 flex justify-center bg-white py-10">
       <div className="w-[90%] max-w-5xl">
         <div className="grid grid-cols-12 gap-4 md:gap-6">
           <div className="col-span-12 flex flex-col items-center justify-center gap-4 rounded-lg p-6 md:col-span-6 md:items-start lg:col-span-4">

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 @import 'tailwindcss';
 
@@ -7,16 +9,25 @@ html {
 }
 
 @theme {
-  --default-font-family: var(--font-helvetica);
   --font-inter: Inter, sans-serif;
-  --font-helvetica: Helvetica, sans-serif;
+  --font-helvetica: Helvetica, Arial, sans-serif;
+  --font-hanken: 'Hanken Grotesk', sans-serif;
+  --font-plus-jakarta: 'Plus Jakarta Sans', sans-serif;
+
+  --default-font-family: var(--font-helvetica);
 
   --color-green: rgba(26, 189, 80, 1);
   --color-primary: rgba(202, 160, 92, 1);
   --color-primary-500: rgba(183, 155, 99, 1);
+  --color-primary-400: rgba(230, 198, 132, 1);
   --color-secondary: rgba(251, 247, 226, 1);
   --color-black: rgba(35, 31, 32, 1);
   --color-gray: rgba(71, 67, 68, 1);
   --color-body: rgba(255, 254, 249, 1);
   --default-bg-color: var(--color-body);
+}
+
+.fade-edges {
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
 }
