@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import { useWindowSize } from 'usehooks-ts'
 import { HamburgerMenuIcon, WhatsappIcon } from '../../assets/icons'
 import { LogoIcon, LogoText } from '../../assets/logo'
@@ -24,7 +25,7 @@ const Navbar = () => {
           </div>
           <div className={`flex gap-8 text-white md:text-sm lg:text-base ${width < 990 ? 'hidden' : 'flex'}`}>
             {menuItems.map((menu) => (
-              <p>{menu.title}</p>
+              <Link to={menu.link}>{menu.title}</Link>
             ))}
           </div>
         </div>
