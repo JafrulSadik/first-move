@@ -38,7 +38,7 @@ const Navbar = () => {
           </div>
 
           <p className="hidden text-white md:block">English</p>
-          <img src={HamburgerMenuIcon} alt="Logo" className="size-4 md:hidden" />
+          <img src={HamburgerMenuIcon} alt="Logo" className="size-5 md:hidden" />
         </div>
       </div>
     </div>

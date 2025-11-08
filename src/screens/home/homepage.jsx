@@ -15,7 +15,7 @@ import TestimonialsSection from './components/testimonials-section'
 const HomePage = () => {
   return (
     <div className="flex w-full justify-center bg-white">
-      <div className="max-w-full">
+      <div className="w-full">
         <Navbar />
         <Hero />
         <ManpowerSection />

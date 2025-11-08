@@ -13,10 +13,10 @@ export default function Footer() {
       }}
     >
       <div className="pt-15 relative flex justify-center bg-[#232221]/60">
-        <div className="flex w-[90%] max-w-5xl flex-col justify-center lg:w-full">
+        <div className="flex w-[90%] max-w-6xl flex-col justify-center">
           {/* grid */}
           <div className="grid border-separate grid-cols-12 lg:gap-4">
-            <div className="order-1 col-span-6 flex flex-col justify-end border-b border-[#A4885A] pb-4 lg:order-1 lg:col-span-4 lg:border-none lg:pb-0">
+            <div className="lg:w-7/10 order-1 col-span-6 flex flex-col justify-end border-b border-[#A4885A] pb-4 lg:order-1 lg:col-span-4 lg:border-none lg:pb-0">
               <div className="mb-4">
                 <img src={Logo} alt="" className="lg:h-15 h-12" />
               </div>
