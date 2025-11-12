@@ -3,7 +3,7 @@ import ContactForm from './contact-form'
 
 export default function ContactUsRight() {
   return (
-    <div className="bg-primary col-span-12 rounded-lg p-8 lg:col-span-8 lg:p-10">
+    <div className="bg-primary col-span-12 rounded-lg p-6 md:p-8 lg:col-span-8 lg:p-10">
       <div className="w-fit rounded-full bg-white p-4">
         <Mail className="text-primary" />
       </div>

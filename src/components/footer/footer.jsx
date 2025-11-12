@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import FooterBg from '../../assets/backgrounds/footer-bg.png'
 import { Logo } from '../../assets/logo'
 
@@ -30,12 +31,12 @@ export default function Footer() {
 
             {/* col-2 */}
             <div className="order-3 col-span-5 flex flex-col justify-end space-y-2 pt-4 text-sm font-bold text-white md:col-span-6 md:text-base lg:order-2 lg:col-span-2 lg:pt-0">
-              <div>Mission & Vision</div>
+              <Link to="/mission-vision">Mission & Vision</Link>
               <div>Careers</div>
               <div>Our Team</div>
               <div>Gallery</div>
-              <div>Blog</div>
-              <div>Contact Us</div>
+              <Link to="/insights">Blog</Link>
+              <Link to="/contact-us">Contact Us</Link>
             </div>
 
             {/* col-3 */}
@@ -44,7 +45,7 @@ export default function Footer() {
                 <div>Services</div>
                 <div className="flex items-center gap-2">
                   <div className="size-2 rounded-full bg-[#CAA05C]" />
-                  <p>Hospitality Manpower</p>
+                  <Link to="/hospitality-management">Hospitality Manpower</Link>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="size-2 rounded-full bg-[#CAA05C]" />

@@ -1,4 +1,5 @@
 import { IoArrowUpOutline } from 'react-icons/io5'
+import { Link } from 'react-router'
 import EventManagement from '../../../assets/images/homepage/premium-services/event-management.png'
 import HardAndSoftFacility from '../../../assets/images/homepage/premium-services/hard-and-soft-facility.png'
 import Hospitality from '../../../assets/images/homepage/premium-services/hospitality-manpower.png'
@@ -10,26 +11,31 @@ const services = [
     id: 1,
     name: 'Hospitality Manpower',
     image: Hospitality,
+    link: '/hospitality-management',
   },
   {
     id: 2,
     name: 'Security Services',
     image: Security,
+    link: '/security-solutions',
   },
   {
     id: 3,
     name: 'Mall & Office Cleaning',
     image: Cleaning,
+    link: '/cleaning-services',
   },
   {
     id: 4,
     name: 'Event Management',
     image: EventManagement,
+    link: '/event-management',
   },
   {
     id: 5,
     name: 'Hard & Soft Facility Services',
     image: HardAndSoftFacility,
+    link: '/hard-and-soft-facility',
   },
 ]
 
@@ -53,12 +59,17 @@ const PremiumServices = () => {
               <img src={service.image} alt={service.name} className="w-full" />
               <h3 className="font-inter my-5 text-center text-xl font-bold">{service.name}</h3>
               <div className="flex justify-center">
-                <div className="border-primary-500 flex w-fit items-center gap-2 rounded-full border p-1 font-bold">
-                  <p className="font-inter px-3 text-base font-bold text-gray-700">Learn More</p>
-                  <div className="bg-primary rounded-full p-2">
-                    <IoArrowUpOutline className="rotate-45 text-white" />
+                <Link
+                  to={service.link}
+                  className="border-primary-500 hover:border-primary-500 hover:bg-primary-500 group flex w-fit items-center gap-2 rounded-full border p-1 font-bold transition-colors duration-300 ease-in-out"
+                >
+                  <p className="font-inter px-3 text-base font-bold text-gray-700 transition-colors duration-300 ease-in-out group-hover:text-white">
+                    Learn More
+                  </p>
+                  <div className="bg-primary rounded-full p-2 transition-colors duration-300 ease-in-out group-hover:bg-white">
+                    <IoArrowUpOutline className="group-hover:text-primary-500 rotate-45 text-white transition-colors duration-300 ease-in-out" />
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
           ))}

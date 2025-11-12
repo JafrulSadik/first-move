@@ -3,7 +3,7 @@ import { PhoneIcon, WhatsappIcon } from '../../../assets/icons'
 
 export default function ContactUsLeft() {
   return (
-    <div className="bg-primary col-span-12 rounded-lg p-8 lg:col-span-4 lg:p-10">
+    <div className="bg-primary col-span-12 rounded-lg p-6 md:p-8 lg:col-span-4 lg:p-10">
       <div className="w-fit rounded-full bg-white p-4">
         <Contact className="text-primary" />
       </div>

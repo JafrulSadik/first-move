@@ -7,7 +7,7 @@ import ServiceCoverSection from './components/service-cover'
 import ServiceList from './components/service-list'
 import SuccessStep from './components/success-step'
 
-export default function ServiceScreen() {
+export default function HospitalityManagementScreen() {
   return (
     <div className="flex w-full justify-center bg-white">
       <div className="w-full">

@@ -1,22 +1,22 @@
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import { Link } from 'react-router'
-import IndustriesServedHeaderBg from '../../../assets/backgrounds/sector-header-bg.png'
+import CaseStudiesHeaderBg from '../../../assets/backgrounds/sector-header-bg.png'
 
-export default function IndustriesServedHeader() {
+export default function ProjectGalleryHeader() {
   return (
     <div
       className="relative pt-10 bg-center bg-cover md:pt-20"
-      style={{ backgroundImage: `url(${IndustriesServedHeaderBg})` }}
+      style={{ backgroundImage: `url(${CaseStudiesHeaderBg})` }}
     >
       <div className="absolute inset-0 bg-[#000000] opacity-70"></div>
       <div className="flex relative z-10 flex-col justify-center items-center py-10 text-sm text-white md:gap-6 md:py-20 md:text-base">
-        <h1 className="text-2xl font-bold text-center md:text-5xl">Industries Served Services</h1>
+        <h1 className="text-2xl font-bold text-center md:text-5xl">Project Gallery</h1>
         <div className="flex gap-2 items-center">
           <Link to="/">Home</Link>
           <p>
             <MdKeyboardArrowRight />
           </p>
-          <Link to="/industries-served">Industries Served</Link>
+          <Link to="/project-gallery">Project Gallery</Link>
         </div>
       </div>
     </div>
