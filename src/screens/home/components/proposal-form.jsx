@@ -1,6 +1,6 @@
 export default function ProposalForm() {
   return (
-    <form action="" className="flex w-full justify-center">
+    <form action="" className="flex justify-center w-full">
       <div className="grid w-[90%] max-w-3xl grid-cols-12 grid-rows-7 gap-4">
         <div className="col-span-6 row-span-1">
           <input
@@ -46,7 +46,7 @@ export default function ProposalForm() {
           />
         </div>
 
-        <div className="col-span-12 row-span-1 flex items-center justify-center">
+        <div className="flex col-span-12 row-span-1 justify-center items-center">
           <button className="font-plus-jakarta rounded-full bg-[#B79B63] px-6 py-3 font-extrabold text-white hover:opacity-90">
             Send Inquiry
           </button>

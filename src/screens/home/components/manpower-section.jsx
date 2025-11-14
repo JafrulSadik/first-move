@@ -3,7 +3,7 @@ import ManpowerRight from './manpower-right'
 
 const ManpowerSection = () => {
   return (
-    <div className={`md:py-30 flex flex-col items-center justify-center bg-white py-10`}>
+    <div className={`flex flex-col justify-center items-center py-10 md:py-30 bg-body`}>
       <div className="gap-15 flex w-[90%] max-w-5xl flex-col lg:flex-row">
         <ManpowerLeft />
         <ManpowerRight />

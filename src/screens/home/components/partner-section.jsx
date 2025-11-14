@@ -5,7 +5,7 @@ import ProposalForm from './proposal-form'
 function PartnerSection() {
   return (
     <div
-      className="py-15 flex w-full flex-col items-center gap-10 overflow-hidden bg-white sm:bg-none md:bg-none lg:bg-no-repeat"
+      className="flex overflow-hidden flex-col gap-10 items-center w-full py-15 bg-body sm:bg-none md:bg-none lg:bg-no-repeat"
       style={{
         backgroundImage: `url(${LeftBg}), url(${RightBg})`,
         backgroundPosition: 'left bottom, right bottom',
@@ -17,7 +17,7 @@ function PartnerSection() {
         <p className="text-sm text-[#231F20] md:text-base">Partner With Us for Excellence</p>
       </div>
 
-      <h1 className="text-center text-4xl font-bold md:text-5xl">
+      <h1 className="text-4xl font-bold text-center md:text-5xl">
         Request <span className="text-[#B79B63]">a Proposal</span>
       </h1>
 

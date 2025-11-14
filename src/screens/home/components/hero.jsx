@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import HeroBackground from '../../../assets/backgrounds/carousel-bg-1.png'
 import { ArrowUpIcon } from '../../../assets/icons'
 
@@ -18,12 +19,15 @@ const Hero = () => {
         </p>
       </div>
 
-      <div className="flex gap-3 items-center px-4 text-lg font-bold text-white uppercase rounded-full bg-primary md:py-3">
+      <Link
+        to={'/hospitality-management'}
+        className="flex gap-3 items-center px-4 py-3 text-lg font-bold text-white uppercase rounded-full bg-primary md:py-3"
+      >
         <span className="mx-4 text-sm md:text-base">Take Counsel</span>
         <div className="flex justify-center items-center bg-white rounded-full size-10">
           <img src={ArrowUpIcon} alt="Arrow Up" width={20} height={20} className="rotate-225" />
         </div>
-      </div>
+      </Link>
 
       <div className="hidden justify-center items-center mt-10 bg-white rounded-full size-10 md:flex">
         <img src={ArrowUpIcon} alt="Arrow Up" width={20} height={20} />

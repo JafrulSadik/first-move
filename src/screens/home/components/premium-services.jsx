@@ -35,39 +35,42 @@ const services = [
     id: 5,
     name: 'Hard & Soft Facility Services',
     image: HardAndSoftFacility,
-    link: '/hard-and-soft-facility',
+    link: '/hard-and-soft-facilities',
   },
 ]
 
 const PremiumServices = () => {
   return (
-    <div className="md:py-15 flex justify-center bg-white py-10">
+    <div className="flex justify-center py-10 md:py-15 bg-body">
       <div className="w-[90%] max-w-5xl">
         <div className="grid grid-cols-12 gap-4 md:gap-6">
-          <div className="col-span-12 flex flex-col items-center justify-center gap-4 rounded-lg p-6 md:col-span-6 md:items-start lg:col-span-4">
-            <div className="border-primary flex w-fit items-center gap-2 rounded-full border px-4 py-1 font-bold uppercase">
-              <div className="bg-primary size-2 rounded-full"></div>
+          <div className="flex flex-col col-span-12 gap-4 justify-center items-center p-6 rounded-lg md:col-span-6 md:items-start lg:col-span-4">
+            <div className="flex gap-2 items-center px-4 py-1 font-bold uppercase rounded-full border border-primary w-fit">
+              <div className="rounded-full bg-primary size-2"></div>
               <p className="text-base">Since 2020</p>
             </div>
-            <p className="lg:leading-15 text-center text-4xl font-bold leading-10 md:text-left md:text-5xl">
+            <p className="text-4xl font-bold leading-10 text-center lg:leading-15 md:text-left md:text-5xl">
               Our Premium Services
             </p>
           </div>
 
           {services.map((service) => (
-            <div key={service.id} className="bg-secondary col-span-12 rounded-xl p-6 md:col-span-6 lg:col-span-4">
+            <div
+              key={service.id}
+              className="col-span-12 p-6 rounded-xl transition-all duration-500 ease-in-out bg-secondary hover:scale-105 md:col-span-6 lg:col-span-4"
+            >
               <img src={service.image} alt={service.name} className="w-full" />
-              <h3 className="font-inter my-5 text-center text-xl font-bold">{service.name}</h3>
+              <h3 className="my-5 text-xl font-bold text-center font-inter">{service.name}</h3>
               <div className="flex justify-center">
                 <Link
                   to={service.link}
-                  className="border-primary-500 hover:border-primary-500 hover:bg-primary-500 group flex w-fit items-center gap-2 rounded-full border p-1 font-bold transition-colors duration-300 ease-in-out"
+                  className="flex gap-2 items-center p-1 font-bold rounded-full border transition-colors ease-in-out duration-800 border-primary-500 hover:border-primary-500 hover:bg-primary-500 group w-fit"
                 >
-                  <p className="font-inter px-3 text-base font-bold text-gray-700 transition-colors duration-300 ease-in-out group-hover:text-white">
+                  <p className="px-3 text-base font-bold text-gray-700 transition-colors duration-300 ease-in-out font-inter group-hover:text-white">
                     Learn More
                   </p>
-                  <div className="bg-primary rounded-full p-2 transition-colors duration-300 ease-in-out group-hover:bg-white">
-                    <IoArrowUpOutline className="group-hover:text-primary-500 rotate-45 text-white transition-colors duration-300 ease-in-out" />
+                  <div className="p-2 rounded-full transition-colors duration-300 ease-in-out bg-primary group-hover:bg-white">
+                    <IoArrowUpOutline className="text-white transition-colors duration-300 ease-in-out rotate-45 group-hover:text-primary-500" />
                   </div>
                 </Link>
               </div>

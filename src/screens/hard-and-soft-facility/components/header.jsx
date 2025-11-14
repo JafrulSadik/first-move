@@ -16,7 +16,7 @@ export default function HardAndSoftFacilityHeader() {
           <p>
             <MdKeyboardArrowRight />
           </p>
-          <Link to="/hard-and-soft-facility">Hard & Soft Facility Services</Link>
+          <Link to="/hard-and-soft-facilities">Hard & Soft Facility Services</Link>
         </div>
       </div>
     </div>

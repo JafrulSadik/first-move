@@ -1,4 +1,5 @@
 import { IoArrowUpOutline } from 'react-icons/io5'
+import { Link } from 'react-router'
 import { ArrowUpIcon } from '../../../assets/icons'
 import CaseStudiesImageOne from '../../../assets/images/case-studies/studies/case-studies-company-1.png'
 import CaseStudiesImageTwo from '../../../assets/images/case-studies/studies/case-studies-company-2.png'
@@ -129,7 +130,8 @@ export default function CaseStudiesContent() {
 
       <div className="grid grid-cols-12 gap-5 mb-15">
         {caseStudiesData.map((caseStudy) => (
-          <div
+          <Link
+            to={`/case-studies/${caseStudy.id}`}
             key={caseStudy.id}
             className="col-span-12 p-5 rounded-xl bg-secondary md:col-span-6 md:p-6 lg:col-span-4"
           >
@@ -145,7 +147,7 @@ export default function CaseStudiesContent() {
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

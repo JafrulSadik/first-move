@@ -13,7 +13,7 @@ export default function SectorHeader({ title, linkTag }) {
           <span>
             <MdKeyboardArrowRight />
           </span>
-          <Link to="/sectors">Sectors</Link>
+          <Link to={`/sectors/${linkTag}`}>Sectors</Link>
           <span>
             <MdKeyboardArrowRight />
           </span>

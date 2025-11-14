@@ -5,7 +5,7 @@ import { Logo } from '../../assets/logo'
 export default function Footer() {
   return (
     <div
-      className="pb-25 relative overflow-hidden md:pb-40 lg:pb-80"
+      className="overflow-hidden relative pb-25 md:pb-40 lg:pb-80"
       style={{
         backgroundImage: `url(${FooterBg})`,
         backgroundSize: 'cover',
@@ -16,12 +16,12 @@ export default function Footer() {
       <div className="pt-15 relative flex justify-center bg-[#232221]/60">
         <div className="flex w-[90%] max-w-6xl flex-col justify-center">
           {/* grid */}
-          <div className="grid border-separate grid-cols-12 lg:gap-4">
+          <div className="grid grid-cols-12 border-separate lg:gap-4">
             <div className="lg:w-7/10 order-1 col-span-6 flex flex-col justify-end border-b border-[#A4885A] pb-4 lg:order-1 lg:col-span-4 lg:border-none lg:pb-0">
               <div className="mb-4">
-                <img src={Logo} alt="" className="lg:h-15 h-12" />
+                <img src={Logo} alt="" className="h-12 lg:h-15" />
               </div>
-              <div className="mb-3 hidden font-bold text-white md:block">
+              <div className="hidden mb-3 font-bold text-white md:block">
                 We transform your vision into beautifully crafted spaces.
               </div>
               <div className="hidden text-sm font-bold text-[#B3B3B3] lg:block">
@@ -30,38 +30,38 @@ export default function Footer() {
             </div>
 
             {/* col-2 */}
-            <div className="order-3 col-span-5 flex flex-col justify-end space-y-2 pt-4 text-sm font-bold text-white md:col-span-6 md:text-base lg:order-2 lg:col-span-2 lg:pt-0">
-              <Link to="/mission-vision">Mission & Vision</Link>
+            <div className="flex flex-col order-3 col-span-5 justify-end pt-4 space-y-2 text-sm font-bold text-white md:col-span-6 md:text-base lg:order-2 lg:col-span-2 lg:pt-0">
+              <Link to="/about">Mission & Vision</Link>
               <div>Careers</div>
-              <div>Our Team</div>
-              <div>Gallery</div>
+              <Link to="/about#our-team">Our Team</Link>
+              <Link to="/project-gallery">Gallery</Link>
               <Link to="/insights">Blog</Link>
               <Link to="/contact-us">Contact Us</Link>
             </div>
 
             {/* col-3 */}
-            <div className="order-4 col-span-7 flex flex-col items-end justify-end pt-4 text-sm font-bold text-white md:col-span-6 md:text-base lg:order-3 lg:col-span-3 lg:pt-0">
+            <div className="flex flex-col order-4 col-span-7 justify-end items-end pt-4 text-sm font-bold text-white md:col-span-6 md:text-base lg:order-3 lg:col-span-3 lg:pt-0">
               <div className="space-y-2">
                 <div>Services</div>
-                <div className="flex items-center gap-2">
+                <div className="flex gap-2 items-center">
                   <div className="size-2 rounded-full bg-[#CAA05C]" />
                   <Link to="/hospitality-management">Hospitality Manpower</Link>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex gap-2 items-center">
                   <div className="size-2 rounded-full bg-[#CAA05C]" />
-                  <p>Security Services</p>
+                  <Link to="/security-solutions">Security Services</Link>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex gap-2 items-center">
                   <div className="size-2 rounded-full bg-[#CAA05C]" />
-                  <p>Mall & Office Cleaning</p>
+                  <Link to="/mall-and-office-cleaning">Mall & Office Cleaning</Link>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex gap-2 items-center">
                   <div className="size-2 rounded-full bg-[#CAA05C]" />
-                  <p>Event Management</p>
+                  <Link to="/event-management">Event Management</Link>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex gap-2 items-center">
                   <div className="size-2 rounded-full bg-[#CAA05C]" />
-                  <p>Hard & Soft Facility Services</p>
+                  <Link to="/hard-and-soft-facilities">Hard & Soft Facility Services</Link>
                 </div>
               </div>
             </div>
@@ -81,7 +81,7 @@ export default function Footer() {
           </div>
 
           <hr className="mt-15 border-[#A4885A] lg:border-[#5D5D5D]/60" />
-          <div className="flex justify-center gap-2 text-sm font-normal lg:text-base lg:font-bold">
+          <div className="flex gap-2 justify-center text-sm font-normal lg:text-base lg:font-bold">
             <p className="py-7 text-center text-[#B3B3B3]">
               Copyright 2025
               <span className="text-white"> © </span>

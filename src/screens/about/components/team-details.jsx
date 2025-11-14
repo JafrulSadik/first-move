@@ -40,9 +40,9 @@ const teams = [
 
 export default function TeamDetails() {
   return (
-    <div className="flex justify-center bg-white md:py-10">
+    <div id="our-team" className="flex justify-center bg-white md:py-10">
       <div className="w-[90%] max-w-6xl lg:space-y-10">
-        <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-stretch lg:gap-0">
+        <div className="flex flex-col gap-10 items-center lg:flex-row lg:items-stretch lg:gap-0">
           <div className="lg:border-r lg:border-[#E2E2E2] lg:pr-10">
             <div className="flex w-fit items-center gap-2 rounded-full border border-[#B79B63] px-2 py-1 font-bold uppercase md:px-4 md:py-1">
               <div className="size-2 rounded-full bg-[#B79B63]"></div>
@@ -56,11 +56,15 @@ export default function TeamDetails() {
 
         <div className="grid grid-cols-12 gap-6 pt-8">
           {teams.map((team, index) => (
-            <div key={index} className="aspect-3/4 col-span-12 flex justify-center md:col-span-6 lg:col-span-4">
-              <div className="relative h-full w-full overflow-hidden rounded-2xl shadow-lg">
-                <img src={team.image} alt="Mark Zakson" className="h-full w-full object-cover" />
+            <div key={index} className="flex col-span-12 justify-center aspect-3/4 md:col-span-6 lg:col-span-4">
+              <div className="overflow-hidden relative w-full h-full rounded-2xl shadow-lg group">
+                <img
+                  src={team.image}
+                  alt="Mark Zakson"
+                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                />
                 <div className="absolute inset-0 bg-black/40"></div>
-                <div className="absolute bottom-6 left-0 right-0 text-center text-white">
+                <div className="absolute right-0 left-0 bottom-6 text-center text-white">
                   <h3 className="text-xl font-semibold">{team.name}</h3>
                   <p className="text-sm opacity-90">{team.position}</p>
                 </div>

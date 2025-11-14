@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import { ArrowUpIcon } from '../../../assets/icons'
 
 export default function ContactUs() {
@@ -7,12 +8,15 @@ export default function ContactUs() {
         Have questions or need assistance? Our team is here to help — reach out anytime!
       </p>
 
-      <div className="flex gap-3 items-center px-2 py-2 mx-auto mt-5 text-lg font-bold text-white uppercase rounded-full bg-primary w-fit md:px-3 md:py-3">
+      <Link
+        to="/contact-us"
+        className="flex gap-3 items-center px-2 py-2 mx-auto mt-5 text-lg font-bold text-white uppercase rounded-full bg-primary w-fit md:px-3 md:py-3"
+      >
         <span className="mx-4 text-sm md:text-base">Contact Us</span>
         <div className="flex justify-center items-center bg-white rounded-full size-8">
           <img src={ArrowUpIcon} alt="Arrow Up" width={20} height={20} className="rotate-225" />
         </div>
-      </div>
+      </Link>
     </div>
   )
 }

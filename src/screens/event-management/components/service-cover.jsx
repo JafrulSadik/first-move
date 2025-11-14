@@ -55,11 +55,11 @@ export default function ServiceCover() {
 
       <div className="flex justify-center mt-5 mb-10 md:mb-20">
         <Link
-          to=""
+          to="/project-gallery"
           className="flex gap-2 items-center p-1 font-bold rounded-full border transition-colors duration-300 ease-in-out border-primary-500 bg-primary-500 group w-fit hover:bg-transparent"
         >
           <p className="px-3 text-base font-bold text-white transition-colors duration-300 ease-in-out font-inter group-hover:text-gray-700">
-            Learn More
+            Gallery
           </p>
           <div className="p-2 bg-white rounded-full transition-colors duration-300 ease-in-out group-hover:bg-primary">
             <IoArrowUpOutline className="transition-colors duration-300 ease-in-out rotate-45 text-primary-500 group-hover:text-white" />

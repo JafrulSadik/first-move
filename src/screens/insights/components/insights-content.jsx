@@ -1,101 +1,62 @@
-import CoverOne from '../../../assets/images/homepage/blog/blog-1.png'
-import CoverTwo from '../../../assets/images/homepage/blog/blog-2.png'
-import CoverThree from '../../../assets/images/homepage/blog/blog-3.png'
-
-const blogData = [
-  {
-    title: 'Hospitality Outsourcing in UAE: End-to-End Solutions',
-    description:
-      'Discover how First Move delivers hospitality outsourcing for hotels, resorts, and guest houses—covering front- and back-of-house operations, SOPs, KPIs',
-    category: 'Hospitality',
-    cover: CoverOne,
-  },
-  {
-    title: 'Event Manpower & Operations: Corporate to Public Events',
-    description:
-      'Explore our disciplined event crews for conferences, weddings, launches, and festivals—ushering, registration, pantry, and post-event deep cleaning with clear KPIs',
-    category: 'Manpower',
-    cover: CoverTwo,
-  },
-  {
-    title: 'Hospitality Outsourcing in UAE: End-to-End Solutions',
-    description:
-      'Discover how First Move delivers hospitality outsourcing for hotels, resorts, and guest houses—covering front- and back-of-house operations, SOPs, KPIs',
-    category: 'Hospitality',
-    cover: CoverThree,
-  },
-  {
-    title: 'Hospitality Outsourcing in UAE: End-to-End Solutions',
-    description:
-      'Discover how First Move delivers hospitality outsourcing for hotels, resorts, and guest houses—covering front- and back-of-house operations, SOPs, KPIs',
-    category: 'Hospitality',
-    cover: CoverOne,
-  },
-  {
-    title: 'Event Manpower & Operations: Corporate to Public Events',
-    description:
-      'Explore our disciplined event crews for conferences, weddings, launches, and festivals—ushering, registration, pantry, and post-event deep cleaning with clear KPIs',
-    category: 'Manpower',
-    cover: CoverTwo,
-  },
-  {
-    title: 'Hospitality Outsourcing in UAE: End-to-End Solutions',
-    description:
-      'Discover how First Move delivers hospitality outsourcing for hotels, resorts, and guest houses—covering front- and back-of-house operations, SOPs, KPIs',
-    category: 'Hospitality',
-    cover: CoverThree,
-  },
-  {
-    title: 'Hospitality Outsourcing in UAE: End-to-End Solutions',
-    description:
-      'Discover how First Move delivers hospitality outsourcing for hotels, resorts, and guest houses—covering front- and back-of-house operations, SOPs, KPIs',
-    category: 'Hospitality',
-    cover: CoverOne,
-  },
-  {
-    title: 'Event Manpower & Operations: Corporate to Public Events',
-    description:
-      'Explore our disciplined event crews for conferences, weddings, launches, and festivals—ushering, registration, pantry, and post-event deep cleaning with clear KPIs',
-    category: 'Manpower',
-    cover: CoverTwo,
-  },
-  {
-    title: 'Hospitality Outsourcing in UAE: End-to-End Solutions',
-    description:
-      'Discover how First Move delivers hospitality outsourcing for hotels, resorts, and guest houses—covering front- and back-of-house operations, SOPs, KPIs',
-    category: 'Hospitality',
-    cover: CoverThree,
-  },
-]
+import { useEffect, useState } from 'react'
+import { Link, useSearchParams } from 'react-router'
+import { blogsData } from '../../../utils/blogs'
+import PaginationWrapper from './pagination-wrapper'
 
 export default function InsightsContent() {
-  return (
-    <div>
-      <div className="py-15 flex justify-center bg-white md:py-20">
-        <div className="w-[90%] max-w-6xl space-y-10">
-          <div className="grid grid-cols-12 gap-6 lg:gap-8">
-            {blogData.map((blog, index) => (
-              <div key={index} className="col-span-12 space-y-4 md:col-span-6 lg:col-span-4">
-                <div className="aspect-5/3 lg:aspect-3/2 relative">
-                  <img src={blog.cover} alt="" className="w-full object-cover" />
-                  <div className="absolute left-2 top-2 rounded-full bg-[#B79B63] px-2 py-1 text-xs font-semibold text-white">
-                    {blog.category}
-                  </div>
-                </div>
+  const [searchParams, setSearchParams] = useSearchParams()
 
-                <div className="space-y-3">
-                  <p className="text-sm">
-                    by <span className="font-extrabold text-[#D5A13A]">Admin</span>
-                  </p>
-                  <h3 className="font-hanken text-xl font-bold">{blog.title}</h3>
-                  <p className="font-inter line-clamp-4 font-medium leading-[150%] text-[#5E5E5E]">
-                    {blog.description}
-                  </p>
+  const pageFromURL = Number(searchParams.get('page')) || 1
+  const [currentPage, setCurrentPage] = useState(pageFromURL)
+
+  const ITEMS_PER_PAGE = 9
+
+  // Update URL when page changes
+  useEffect(() => {
+    setSearchParams({ page: String(currentPage) })
+  }, [currentPage, setSearchParams])
+
+  // Calculate start & end indexes
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE
+  const endIndex = startIndex + ITEMS_PER_PAGE
+
+  // Slice actual data
+  const visibleBlogs = blogsData.slice(startIndex, endIndex)
+
+  // Total page count
+  const pageCount = Math.ceil(blogsData.length / ITEMS_PER_PAGE)
+
+  const handlePageChange = (data) => {
+    setCurrentPage(data.selected + 1) // react-paginate is 0-based
+  }
+
+  return (
+    <div className="flex justify-center bg-white py-15 md:py-20">
+      <div className="w-[90%] max-w-6xl space-y-10">
+        {/* BLOGS GRID */}
+        <div className="grid grid-cols-12 gap-6 lg:gap-8">
+          {visibleBlogs.map((blog, index) => (
+            <Link to={`/insights/${blog.id}`} key={index} className="col-span-12 space-y-4 md:col-span-6 lg:col-span-4">
+              <div className="relative aspect-5/3 lg:aspect-3/2">
+                <img src={blog.image} alt="" className="object-cover w-full h-full rounded-xl" />
+                <div className="absolute left-2 top-2 rounded-full bg-[#B79B63] px-2 py-1 text-xs font-semibold text-white">
+                  {blog.category}
                 </div>
               </div>
-            ))}
-          </div>
+
+              <div className="space-y-3">
+                <p className="text-sm">
+                  by <span className="font-extrabold text-[#D5A13A]">Admin</span>
+                </p>
+                <h3 className="text-xl font-bold font-hanken">{blog.title}</h3>
+                <p className="font-inter line-clamp-4 font-medium leading-[150%] text-[#5E5E5E]">{blog.description}</p>
+              </div>
+            </Link>
+          ))}
         </div>
+
+        {/* PAGINATION */}
+        <PaginationWrapper pageCount={pageCount} onPageChange={handlePageChange} />
       </div>
     </div>
   )

@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router'
 import AboutPage from '../screens/about/about'
+import BlogDetailsScreen from '../screens/blog-details/blog-details'
 import CaseStudiesDetailsScreen from '../screens/case-studies-details/case-studies-details'
 import CaseStudiesScreen from '../screens/case-studies/case-studies'
 import CleaningScreen from '../screens/cleaning/cleaning'
@@ -41,11 +42,11 @@ export const router = createBrowserRouter([
     element: <SecuritySolutionScreen />,
   },
   {
-    path: '/cleaning-services',
+    path: '/mall-and-office-cleaning',
     element: <CleaningScreen />,
   },
   {
-    path: '/hard-and-soft-facility',
+    path: '/hard-and-soft-facilities',
     element: <HardAndSoftFacility />,
   },
 
@@ -56,6 +57,10 @@ export const router = createBrowserRouter([
   {
     path: '/insights',
     element: <InsightsScreen />,
+  },
+  {
+    path: '/insights/:id',
+    element: <BlogDetailsScreen />,
   },
   {
     path: '/case-studies',

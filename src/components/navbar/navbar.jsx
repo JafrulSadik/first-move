@@ -13,8 +13,11 @@ const menuItems = [
     link: '#',
     submenus: [
       { title: 'Hospitality Management', link: '/hospitality-management' },
-      { title: 'Cleaning Services', link: '/cleaning-services' },
       { title: 'Security Solutions', link: '/security-solutions' },
+      { title: 'Mall & Office Cleaning', link: '/mall-and-office-cleaning' },
+      { title: 'Event Management', link: '/event-management' },
+      { title: 'Hard & Soft Facility', link: '/hard-and-soft-facilities' },
+      { title: 'Industries Served', link: '/industries-served' },
     ],
   },
   {
@@ -33,18 +36,10 @@ const menuItems = [
     ],
   },
   {
-    title: 'Solutions',
-    link: '#',
-    submenus: [
-      { title: 'Complete Hospitality Solution', link: '/solutions' },
-      { title: 'Event Management Solutions', link: '/solutions' },
-      { title: 'Security Solutions', link: '/solutions' },
-      { title: 'Mall & Supermarket Solutions', link: '/solutions' },
-      { title: 'Healthcare Facility Solutions', link: '/solutions' },
-      { title: 'Education Premises Solutions', link: '/solutions' },
-      { title: 'Integrated Building Management', link: '/solutions' },
-    ],
+    title: 'Insights',
+    link: '/insights',
   },
+  { title: 'Case Studies', link: '/case-studies' },
   { title: 'Download', link: '/download' },
 ]
 
@@ -73,27 +68,27 @@ const Navbar = () => {
             {menuItems.map((menu) => (
               <div
                 key={menu.title}
-                className="flex relative group"
+                className="flex relative"
                 onMouseEnter={() => setOpenMenu(menu.title)}
                 onMouseLeave={() => {
                   setOpenMenu(null)
                   setOpenSubMenu(null)
                 }}
               >
-                <Link to={menu.link} className="flex items-center hover:text-primary-400">
+                <Link to={menu.link} className="flex items-center hover:text-primary-400 group">
                   {menu.title}
                 </Link>
 
                 {/* 2nd Level Dropdown */}
                 {menu.submenus && openMenu === menu.title && (
-                  <div className="absolute left-0 top-7 w-60 text-white rounded-md border shadow-lg border-white/10 bg-black/80">
+                  <div className="absolute left-0 top-7 w-60 text-white rounded-md border shadow-lg border-white/10 bg-black/80 group-hover:block">
                     {menu.submenus.map((submenu, index) => {
                       const isFirst = index === 0
                       const isLast = index === menu.submenus.length - 1
                       return (
                         <div
                           key={submenu.title}
-                          className="relative group/sub"
+                          className="relative"
                           onMouseEnter={() => setOpenSubMenu(submenu.title)}
                           onMouseLeave={() => setOpenSubMenu(null)}
                         >
